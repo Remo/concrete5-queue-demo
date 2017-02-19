@@ -123,9 +123,6 @@ class ProcessNotifications extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $queue = Queue::get('queue-demo');
-        $queue->send(1);
-
         $this->input = $input;
         $this->output = $output;
         $this->app = Facade::getFacadeApplication();
